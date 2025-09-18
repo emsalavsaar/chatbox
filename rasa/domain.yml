@@ -1,0 +1,27 @@
+version: "3.0"
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - ask_scope
+  - ask_requirements
+  - ask_benefits
+  - fallback_intent
+
+responses:
+  utter_greet:
+    - text: "Hello! I can help you with ISO 50001. Ask me anything about it."
+  utter_goodbye:
+    - text: "Goodbye! Feel free to ask me more questions anytime."
+  utter_thanks:
+    - text: "You're welcome!"
+  utter_ask_scope:
+    - text: "ISO 50001 provides requirements for an Energy Management System (EnMS), focusing on improving energy performance within an organization."
+  utter_ask_requirements:
+    - text: "Key requirements of ISO 50001 include setting an energy policy, establishing targets and plans, monitoring performance, and continuous improvement processes."
+  utter_ask_benefits:
+    - text: "Benefits of implementing ISO 50001 include reduced energy costs, lower environmental impact, and compliance with regulations."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

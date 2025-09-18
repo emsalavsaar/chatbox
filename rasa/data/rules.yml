@@ -1,0 +1,21 @@
+version: "3.0"
+rules:
+- rule: Respond to greetings
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Respond to scope question
+  steps:
+  - intent: ask_scope
+  - action: utter_ask_scope
+
+- rule: Respond to requirements question
+  steps:
+  - intent: ask_requirements
+  - action: utter_ask_requirements
+
+- rule: Respond to benefits question
+  steps:
+  - intent: ask_benefits
+  - action: utter_ask_benefits

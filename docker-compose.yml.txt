@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  rasa:
+    image: rasa/rasa:3.6.0-full
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./rasa:/app
+    command: ["run", "--enable-api", "--cors", "*"]
+    depends_on:
+      - action_server
+
+  action_server:
+    image: rasa/rasa-sdk:3.6.0
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./rasa/actions:/app/actions
+
+  web:
+    build: ./web
+    ports:
+      - "8080:80"

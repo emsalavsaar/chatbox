@@ -1,0 +1,33 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - see you
+    - bye
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thanks
+
+- intent: ask_scope
+  examples: |
+    - What does ISO 50001 cover?
+    - Can you explain the scope of ISO 50001?
+
+- intent: ask_requirements
+  examples: |
+    - What are the requirements of ISO 50001?
+    - What do I need to implement for energy management?
+
+- intent: ask_benefits
+  examples: |
+    - What are the benefits of ISO 50001?
+    - How will ISO 50001 help my organization?
